@@ -1,0 +1,10 @@
+
+services:
+  bot_app:
+      build:
+        context: .
+        dockerfile: ./Dockerfile
+      container_name: test_bot_app
+      restart: always
+      env_file: 
+      - ./.env
