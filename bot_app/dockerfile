@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 ADD . /code/
 
 EXPOSE 8000
-CMD ["python", "bot_app.py"]
+CMD ["python", "bot_app/bot_app.py"]

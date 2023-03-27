@@ -4,12 +4,9 @@ from chat_gpt import chatgpt
 
 bot = telebot.TeleBot(os.getenv("TELEGRAM_API_KEY"))
 
-@bot.message_handler(func=lambda _: True)
+@bot.message_handler(content_types=['text'])
 def handle_message(message):
-    if message.text[:4] == 'gpt ':
-        response = chatgpt(message.text)
-    else:
-        response = "TEST OK"
+    response = chatgpt(message.text)
     
     bot.send_message(chat_id=message.from_user.id, text=response)
     print(f"""
