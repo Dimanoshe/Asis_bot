@@ -21,5 +21,4 @@ jobs:
           pip install -r requirements.txt
       - name: Build Docker
         run: |
-          docker build -t app_bot_image .
-
+          docker build -t app_bot_image ./bot_app/
